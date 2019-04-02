@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+    <form action="/charge" method="POST">
+      <article>
+        <label>
+          <span>Amount is $5.00</span>
+        </label>
+      </article>
+
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="{{ key }}"
+              data-description="A flask Charge"
+              data-amount="500"
+              data-locale="auto"></script>
+    </form>
+{% endblock %}
